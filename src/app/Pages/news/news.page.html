@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>الأخبار</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <mat-tab-group>
+        <mat-tab *ngFor="let category of categories" label="{{category.categoryNameAr}}">
+            {{category.categoryNameEn}}
+        </mat-tab>
+    </mat-tab-group>
+</ion-content>
