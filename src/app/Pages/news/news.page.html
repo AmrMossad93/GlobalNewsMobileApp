@@ -7,18 +7,23 @@
 <ion-content>
     <mat-tab-group>
         <mat-tab *ngFor="let category of categories" label="{{category.categoryNameAr}}">
-            {{category.categoryNameEn}}
-            <ion-card>
-                <ion-card-header>
-                    <ion-card-title>Card Titles</ion-card-title>
-                    <ion-card-subtitle>{{category.categoryNameEn}}</ion-card-subtitle>
-                </ion-card-header>
+            <div class="row">
+                <div *ngFor="let news of category.News" class="col-md-6 col-sm-6 col-12">
+                    <ion-card routerLink="{{news.newsID}}">
+                        <img [src]="news.image" alt="{{news.author}}">
+                        <ion-card-header>
+                            <ion-card-title>{{news.title}}</ion-card-title>
+                            <ion-card-subtitle>{{news.author}} - {{news.date | date}}</ion-card-subtitle>
+                        </ion-card-header>
 
-                <ion-card-content>
-                    Keep close to Nature's heart... and break clear away, once in awhile,
-                    and climb a mountain or spend a week in the woods. Wash your spirit clean.
-                </ion-card-content>
-            </ion-card>
+                        <ion-card-content>
+                            {{news.description}}
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+            </div>
+
+
         </mat-tab>
     </mat-tab-group>
 </ion-content>

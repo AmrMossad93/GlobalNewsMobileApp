@@ -8,6 +8,7 @@ import {NewsPageRoutingModule} from './news-routing.module';
 
 import {NewsPage} from './news.page';
 import {AngularMaterialModule} from '../../angular-material.module';
+import {NewsDetailsComponent} from './news-details/news-details.component';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import {AngularMaterialModule} from '../../angular-material.module';
         AngularMaterialModule,
         NewsPageRoutingModule
     ],
-    declarations: [NewsPage]
+    declarations: [NewsPage, NewsDetailsComponent]
 })
 export class NewsPageModule {
 }

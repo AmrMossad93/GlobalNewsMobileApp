@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{newsData?.title}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <img [src]="newsData?.image" alt="{{newsData?.author}}">
+        <ion-card-header>
+            <ion-card-title>{{newsData?.title}}</ion-card-title>
+            <ion-card-subtitle>{{newsData?.author}} - {{newsData?.date | date}}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+            {{newsData?.contentNews}}
+            <div *ngIf="newsData?.url" class="row mt-3">
+                <div class="col-12">
+                    <ion-button expand="block" fill="outline" href="{{newsData?.url}}" target="_blank">الذهاب الي
+                        المصدر
+                    </ion-button>
+                </div>
+            </div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

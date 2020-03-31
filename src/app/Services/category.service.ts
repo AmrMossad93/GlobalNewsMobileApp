@@ -14,4 +14,8 @@ export class CategoryService {
     getCategory() {
         return this.dataService.get('api/Category');
     }
+
+    getCategoryNewsById(id) {
+        return this.dataService.get('api/News/' + id);
+    }
 }
