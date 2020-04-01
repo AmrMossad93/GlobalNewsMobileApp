@@ -12,8 +12,18 @@
                     <ion-card routerLink="{{news.newsID}}">
                         <img [src]="news.image" alt="{{news.author}}">
                         <ion-card-header>
-                            <ion-card-title>{{news.title}}</ion-card-title>
-                            <ion-card-subtitle>{{news.author}} - {{news.date | date}}</ion-card-subtitle>
+                            <ion-card-title class="ion-text-center">{{news.title}}</ion-card-title>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <ion-card-subtitle>{{news.author}}</ion-card-subtitle>
+                                    </ion-col>
+                                    <ion-col size="6">
+                                        <ion-card-subtitle class="ion-text-end">{{news.date | date}}</ion-card-subtitle>
+                                    </ion-col>
+                                </ion-row>
+
+                            </ion-grid>
                         </ion-card-header>
 
                         <ion-card-content>
